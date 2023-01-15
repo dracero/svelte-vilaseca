@@ -27,7 +27,7 @@
     const controls = new OrbitControls(camera, renderer.domElement);
     //añadir el 3D
     const loader = new GLTFLoader();
-    loader.load('/src/cilindroVilaseca.glb', function(gltf) {
+    loader.load('./src/cilindroVilaseca.glb', function(gltf) {
       gltf.scene.scale.set(1, 1, 1);
       scene.add(gltf.scene);
       // Crear el controlador de animación
