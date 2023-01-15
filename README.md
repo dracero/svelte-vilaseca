@@ -36,3 +36,27 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+Hay que instalar el modulo para Vercel 
+
+npm i -D @sveltejs/adapter-vercel@next
+
+y el svlete.config.js tiene que ser:
+
+import vercel from '@sveltejs/adapter-vercel';
+
+const config = {
+    kit: {
+        // ...
+        adapter: vercel(),
+        // ...
+    }
+}
+
+export default config;
+
+Hay que tener en cuenta que todos los archivos como imágenes y .glb hay que guardarlos en una subcarpeta de la carpteta /src. Por ejemplo en este caso 
+/src/models y cuando cargamos el archivo ponemos solo /models/<nombre>.glb
+
+La carpeta /src funciona como la carpeta /public en el caso de svelte-kit
+

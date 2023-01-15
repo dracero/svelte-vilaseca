@@ -11,7 +11,3 @@ const config = {
 
 export default config
 
-//ejecutar:
-/* npm i -D @sveltejs/adapter-vercel@next
-
-y luego cambiar el config por el archivo de más arriba*/
