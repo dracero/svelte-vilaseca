@@ -27,6 +27,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@react-three/drei": "^9.58.2",
+		"drei": "^2.2.21",
 		"three": "^0.148.0",
 		"vite-plugin-importer": "^0.2.5"
 	}

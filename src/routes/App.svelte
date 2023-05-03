@@ -27,12 +27,12 @@
     const controls = new OrbitControls(camera, renderer.domElement);
     //añadir el 3D
     const loader = new GLTFLoader();
-    loader.load('/models/cilindroVilaseca.glb', function(gltf) {
+    loader.load('/models/cupula.gltf', function(gltf) {
       gltf.scene.scale.set(1, 1, 1);
       scene.add(gltf.scene);
       // Crear el controlador de animación
       mixer = new THREE.AnimationMixer(gltf.scene);
-      mixer.clipAction(gltf.animations[1]).play();
+      mixer.clipAction(gltf.animations[2]).play();
       //Controllers
       const controller1 = renderer.xr.getController( 0 );
 			scene.add( controller1 );
@@ -41,10 +41,25 @@
       } );
     //Fin Controllers
     });
-    // Añadir iluminación
+    //
     const light = new THREE.PointLight(0xffffff, 1, 100);
-    light.position.set(1, 1, 10);
+    light.position.set(20, 20, 20);
     scene.add(light);
+    //I need to add more light to the scene but in different positions
+    const light2 = new THREE.PointLight(0xffffff, 1, 100);
+    light2.position.set(-20, -20, -20);
+    scene.add(light2);
+    //I need to add more light to the scene but in different positions
+    const light3 = new THREE.PointLight(0xffffff, 1, 100);
+    light3.position.set(20, -20, 20);
+    scene.add(light3);
+    //I need to add more light to the scene but in different positions
+    const light4 = new THREE.PointLight(0xffffff, 1, 100);
+    light4.position.set(-20, 20, -20);
+    scene.add(light4);
+    //I need to add more light to the scene but in different positions
+    const light5 = new THREE.PointLight(0xffffff, 1, 100);
+    light5.position.set(20, 20, -20);
   }
   function animate() {
     requestAnimationFrame(animate);

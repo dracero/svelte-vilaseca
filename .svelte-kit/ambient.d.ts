@@ -31,6 +31,7 @@ declare module '$env/static/private' {
 	export const USER: string;
 	export const LC_TIME: string;
 	export const npm_config_user_agent: string;
+	export const GIO_MODULE_DIR: string;
 	export const SSH_AGENT_PID: string;
 	export const XDG_SESSION_TYPE: string;
 	export const GIT_ASKPASS: string;
@@ -41,7 +42,9 @@ declare module '$env/static/private' {
 	export const CHROME_DESKTOP: string;
 	export const TERM_PROGRAM_VERSION: string;
 	export const DESKTOP_SESSION: string;
+	export const GTK_PATH: string;
 	export const npm_package_json: string;
+	export const GTK_IM_MODULE_FILE: string;
 	export const GIO_LAUNCHED_DESKTOP_FILE: string;
 	export const GNOME_SHELL_SESSION_MODE: string;
 	export const GTK_MODULES: string;
@@ -72,6 +75,7 @@ declare module '$env/static/private' {
 	export const npm_config_node_gyp: string;
 	export const PATH: string;
 	export const SESSION_MANAGER: string;
+	export const GTK_EXE_PREFIX: string;
 	export const INVOCATION_ID: string;
 	export const NODE: string;
 	export const npm_package_name: string;
@@ -81,6 +85,7 @@ declare module '$env/static/private' {
 	export const XDG_RUNTIME_DIR: string;
 	export const GDK_BACKEND: string;
 	export const DISPLAY: string;
+	export const LOCPATH: string;
 	export const LANG: string;
 	export const XDG_CURRENT_DESKTOP: string;
 	export const LC_TELEPHONE: string;
@@ -119,6 +124,7 @@ declare module '$env/static/private' {
 	export const LC_NUMERIC: string;
 	export const npm_command: string;
 	export const LC_PAPER: string;
+	export const GTK_USE_PORTAL: string;
 	export const NVM_RC_VERSION: string;
 	export const INIT_CWD: string;
 	export const EDITOR: string;
@@ -157,6 +163,7 @@ declare module '$env/dynamic/private' {
 		USER: string;
 		LC_TIME: string;
 		npm_config_user_agent: string;
+		GIO_MODULE_DIR: string;
 		SSH_AGENT_PID: string;
 		XDG_SESSION_TYPE: string;
 		GIT_ASKPASS: string;
@@ -167,7 +174,9 @@ declare module '$env/dynamic/private' {
 		CHROME_DESKTOP: string;
 		TERM_PROGRAM_VERSION: string;
 		DESKTOP_SESSION: string;
+		GTK_PATH: string;
 		npm_package_json: string;
+		GTK_IM_MODULE_FILE: string;
 		GIO_LAUNCHED_DESKTOP_FILE: string;
 		GNOME_SHELL_SESSION_MODE: string;
 		GTK_MODULES: string;
@@ -198,6 +207,7 @@ declare module '$env/dynamic/private' {
 		npm_config_node_gyp: string;
 		PATH: string;
 		SESSION_MANAGER: string;
+		GTK_EXE_PREFIX: string;
 		INVOCATION_ID: string;
 		NODE: string;
 		npm_package_name: string;
@@ -207,6 +217,7 @@ declare module '$env/dynamic/private' {
 		XDG_RUNTIME_DIR: string;
 		GDK_BACKEND: string;
 		DISPLAY: string;
+		LOCPATH: string;
 		LANG: string;
 		XDG_CURRENT_DESKTOP: string;
 		LC_TELEPHONE: string;
@@ -245,6 +256,7 @@ declare module '$env/dynamic/private' {
 		LC_NUMERIC: string;
 		npm_command: string;
 		LC_PAPER: string;
+		GTK_USE_PORTAL: string;
 		NVM_RC_VERSION: string;
 		INIT_CWD: string;
 		EDITOR: string;
