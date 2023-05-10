@@ -124,7 +124,6 @@ declare module '$env/static/private' {
 	export const LC_NUMERIC: string;
 	export const npm_command: string;
 	export const LC_PAPER: string;
-	export const GTK_USE_PORTAL: string;
 	export const NVM_RC_VERSION: string;
 	export const INIT_CWD: string;
 	export const EDITOR: string;
@@ -256,7 +255,6 @@ declare module '$env/dynamic/private' {
 		LC_NUMERIC: string;
 		npm_command: string;
 		LC_PAPER: string;
-		GTK_USE_PORTAL: string;
 		NVM_RC_VERSION: string;
 		INIT_CWD: string;
 		EDITOR: string;

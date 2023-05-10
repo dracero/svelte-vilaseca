@@ -6,9 +6,9 @@
   import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
   let scene, camera, renderer, group, controls, mixer;
-
-function init(){
-  scene = new THREE.Scene();
+  
+  function init(){
+    scene = new THREE.Scene();
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
   renderer = new THREE.WebGLRenderer();
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -47,8 +47,9 @@ function init(){
     //I need to add more light to the scene but in different positions
     const light5 = new THREE.PointLight(0xffffff, 1, 100);
     light5.position.set(20, 20, -20);
-    camera.position.z = 5;
-    
+    camera.position.z = 15;
+    camera.position.y = -1;
+    camera.position.x = -1;
     // Inicia la animación en bucle
     renderer.setAnimationLoop( function () {
       animate();
@@ -86,7 +87,7 @@ onMount(() => {
   
 </script>
 
-<div bind:this={group}>
+<div >
   <group>
     <group
       name="NurbsPath001"
