@@ -1,7 +1,6 @@
 <script>
-  //import App from "./App.svelte";
-  import Model from "./Model.svelte";
+  import App from "./App.svelte";
 </script>
 
-<Model />
+<App />
 

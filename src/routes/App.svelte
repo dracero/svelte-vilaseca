@@ -15,7 +15,7 @@
 
     // Crear la cámara
     camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(-1, -1, 15);
+    camera.position.set(5, 1, -1);
 
     // Crear el renderizador
     renderer = new THREE.WebGLRenderer();
@@ -27,12 +27,12 @@
     const controls = new OrbitControls(camera, renderer.domElement);
     //añadir el 3D
     const loader = new GLTFLoader();
-    loader.load('/models/cupula.gltf', function(gltf) {
+    loader.load('/models/esfera.gltf', function(gltf) {
       gltf.scene.scale.set(1, 1, 1);
       scene.add(gltf.scene);
       // Crear el controlador de animación
       mixer = new THREE.AnimationMixer(gltf.scene);
-      mixer.clipAction(gltf.animations[2]).play();
+      mixer.clipAction(gltf.animations[0]).play();
       //Controllers
       const controller1 = renderer.xr.getController( 0 );
 			scene.add( controller1 );
@@ -42,12 +42,12 @@
     //Fin Controllers
     });
     //
-    const light = new THREE.PointLight(0xffffff, 1, 100);
-    light.position.set(20, 20, 20);
+    const light = new THREE.PointLight(0xffffff, 1, 1);
+    light.position.set(5, 20, -1);
     scene.add(light);
     //I need to add more light to the scene but in different positions
     const light2 = new THREE.PointLight(0xffffff, 1, 100);
-    light2.position.set(-20, -20, -20);
+    light2.position.set(-5, -20, 1);
     scene.add(light2);
     //I need to add more light to the scene but in different positions
     const light3 = new THREE.PointLight(0xffffff, 1, 100);
@@ -58,8 +58,23 @@
     light4.position.set(-20, 20, -20);
     scene.add(light4);
     //I need to add more light to the scene but in different positions
-    const light5 = new THREE.PointLight(0xffffff, 1, 100);
-    light5.position.set(20, 20, -20);
+    const light5 = new THREE.AmbientLight(0xffffff, 1, 100);
+    light5.position.set(5, 1, -2);
+    scene.add(light5);
+    //I need to add spotlights to the scene
+    const spotLight = new THREE.SpotLight(0xffffff);
+    spotLight.position.set(5, 10, -2);
+    spotLight.castShadow = true;
+    scene.add(spotLight);
+    //I need to add spotlights to the scene in different positions
+    const spotLight2 = new THREE.SpotLight(0xffffff);
+    spotLight2.position.set(-5, -10, 2);
+    spotLight2.castShadow = true;
+    scene.add(spotLight2);
+    //I need to add spotlights to the scene in different positions
+    const spotLight3 = new THREE.DirectionalLight(0xffffff);
+    spotLight3.position.set(1,0,1);
+    scene.add(spotLight3);
   }
   function animate() {
     requestAnimationFrame(animate);
